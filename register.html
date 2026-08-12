@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register | Explore India</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="account-page">
+
+<div class="account-card glass">
+    <a class="account-brand" href="index.html">✈️ Explore India</a>
+    <div class="account-icon">👤</div>
+    <h1>Create Account</h1>
+    <p>Start your journey with Explore India.</p>
+
+    <form onsubmit="return registerUser()">
+        <label>Full Name</label>
+        <input id="registerName" type="text" placeholder="Enter full name" required>
+
+        <label>Email</label>
+        <input id="registerEmail" type="email" placeholder="Enter email" required>
+
+        <label>Phone Number</label>
+        <input id="registerPhone" type="tel" maxlength="10" placeholder="10-digit phone" required>
+
+        <label>Password</label>
+        <input id="registerPassword" type="password" placeholder="Create password" required>
+
+        <label>Confirm Password</label>
+        <input id="confirmPassword" type="password" placeholder="Confirm password" required>
+
+        <button class="primary-button full" type="submit">Create Account</button>
+    </form>
+
+    <p class="account-switch">Already have an account? <a href="login.html">Login</a></p>
+    <a class="back-link" href="index.html">← Back to Home</a>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

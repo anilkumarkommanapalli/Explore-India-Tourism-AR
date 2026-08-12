@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment | Explore India</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="account-page">
+
+<div class="booking-card glass payment-card">
+    <a class="account-brand" href="index.html">✈️ Explore India</a>
+    <h1>Complete Payment</h1>
+    <p>Review your booking and select a payment method.</p>
+
+    <div class="payment-summary">
+        <p><span>Destination</span><strong id="payDestination">-</strong></p>
+        <p><span>Package</span><strong id="payPackage">-</strong></p>
+        <p><span>Travelers</span><strong id="payTravelers">-</strong></p>
+        <p class="pay-total"><span>Total</span><strong id="payAmount">₹0</strong></p>
+    </div>
+
+    <div class="payment-tabs">
+        <button class="active" onclick="selectPayment('upi', this)">📱 UPI</button>
+        <button onclick="selectPayment('qr', this)">📷 QR</button>
+        <button onclick="selectPayment('card', this)">💳 Card</button>
+    </div>
+
+    <div id="upiBox" class="payment-box">
+        <h2>UPI Payment</h2>
+        <p>Enter your UPI ID and continue.</p>
+        <input id="upiId" type="text" placeholder="example@upi">
+        <button class="primary-button full" onclick="demoPayment('UPI')">Continue Payment</button>
+    </div>
+
+    <div id="qrBox" class="payment-box hidden">
+        <h2>Scan & Pay</h2>
+        <div class="qr-wrap">
+            <img src="images/qr.jpg" alt="Payment QR" onerror="this.src='images/qr-placeholder.svg'">
+        </div>
+        <div class="qr-amount">Pay Exactly <strong id="qrAmount">₹0</strong></div>
+        <button class="primary-button full" onclick="demoPayment('QR')">I Have Paid</button>
+    </div>
+
+    <div id="cardBox" class="payment-box hidden">
+        <h2>Card Payment</h2>
+        <input id="cardName" type="text" placeholder="Card Holder Name">
+        <input id="cardNumber" type="text" maxlength="19" placeholder="Card Number">
+        <div class="two-inputs">
+            <input id="expiry" type="text" maxlength="5" placeholder="MM/YY">
+            <input id="cvv" type="password" maxlength="3" placeholder="CVV">
+        </div>
+        <button class="primary-button full" onclick="demoPayment('Card')">Pay Now</button>
+    </div>
+
+    <p class="demo-note">College project payment UI — connect a payment gateway for real transactions.</p>
+    <a class="back-link" href="booking.html">← Back to Booking</a>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

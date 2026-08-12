@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login | Explore India</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="account-page">
+
+<div class="account-card glass">
+    <a class="account-brand" href="index.html">✈️ Explore India</a>
+    <div class="account-icon">🔐</div>
+    <h1>Welcome Back</h1>
+    <p>Login to continue your journey.</p>
+
+    <form onsubmit="return loginUser()">
+        <label>Email</label>
+        <input id="loginEmail" type="email" placeholder="Enter email" required>
+
+        <label>Password</label>
+        <input id="loginPassword" type="password" placeholder="Enter password" required>
+
+        <button class="primary-button full" type="submit">Login</button>
+    </form>
+
+    <p class="account-switch">Don't have an account? <a href="register.html">Register</a></p>
+    <a class="back-link" href="index.html">← Back to Home</a>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

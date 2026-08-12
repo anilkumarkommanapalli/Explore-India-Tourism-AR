@@ -1,0 +1,66 @@
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#07152f;--blue:#1746a2;--gold:#f4a11a;--white:#fff;--muted:#64748b;--glass:rgba(255,255,255,.72);--line:rgba(255,255,255,.6)}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,sans-serif;color:#102b5e;background:#f4f7fb}
+button,input,select,textarea{font:inherit}
+a{text-decoration:none;color:inherit}
+.hidden{display:none!important}
+
+/* INTRO */
+#introScreen{position:fixed;inset:0;z-index:9999;background:linear-gradient(135deg,#06122b,#1746a2 55%,#eaf2ff);display:flex;align-items:center;justify-content:center;color:white;overflow:hidden;animation:introOut .7s 2.7s forwards}
+.intro-plane{position:absolute;font-size:64px;left:-10%;top:72%;animation:fly 2.4s ease-out forwards}
+.intro-glass{width:min(600px,88%);padding:55px 30px;text-align:center;border:1px solid #ffffff66;background:#ffffff18;backdrop-filter:blur(20px);border-radius:32px;box-shadow:0 30px 80px #0005;animation:introIn 1s .25s both}
+.intro-logo{font-size:70px}.intro-glass h1{font-size:55px;margin:8px 0}.intro-glass p{color:#ffd477;font-weight:800;letter-spacing:3px}.intro-glass span{display:block;margin-top:14px;color:#dbeafe}
+@keyframes fly{from{left:-12%;top:75%;opacity:0}20%{opacity:1}to{left:105%;top:15%;opacity:1}}
+@keyframes introIn{from{opacity:0;transform:scale(.88) translateY(30px)}to{opacity:1;transform:none}}
+@keyframes introOut{to{opacity:0;visibility:hidden}}
+
+/* LOADER */
+#loader{position:fixed;inset:0;z-index:9998;background:#07152f;color:white;display:flex;align-items:center;justify-content:center;flex-direction:column;transition:.6s}
+.loader-train{font-size:72px;animation:train 1.8s linear infinite}
+@keyframes train{from{transform:translateX(-45vw)}to{transform:translateX(45vw)}}
+#loader p{margin-top:12px;letter-spacing:2px}
+
+/* NAV */
+.navbar{height:78px;position:sticky;top:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:0 7%;background:rgba(255,255,255,.84);backdrop-filter:blur(18px);border-bottom:1px solid #fff;box-shadow:0 8px 30px #0b255414}
+.brand{font-size:23px;font-weight:900;color:#102b5e}.navbar nav{display:flex;gap:22px;align-items:center}.navbar nav>a:hover{color:#e18b00}
+.profile-btn{border:1px solid #dbe4f2;background:#ffffffb8;border-radius:30px;padding:10px 16px;cursor:pointer;color:#102b5e;font-weight:700}
+
+/* HERO */
+.hero{min-height:680px;padding:80px 7%;display:flex;align-items:center;background:linear-gradient(90deg,#06122bcc,#06122b45),url("../images/rajasthan.jpg") center/cover}
+.hero-content{max-width:650px;color:white;padding:48px;border-radius:30px}
+.glass{background:var(--glass);backdrop-filter:blur(20px);border:1px solid #ffffffbd;box-shadow:0 25px 70px #102b5e18}
+.hero-content{background:#ffffff14;border-color:#ffffff45}
+.eyebrow{font-size:12px;letter-spacing:3px;font-weight:900;color:#e28b00}.hero h1{font-size:62px;line-height:1.04;margin:18px 0}.hero h1 span{color:#ffd36c}.hero p{font-size:18px;line-height:1.7;color:#edf4ff}.hero-buttons{display:flex;gap:14px;margin-top:28px}
+.primary-button,.glass-button{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:13px;padding:13px 22px;font-weight:800;cursor:pointer}.primary-button{background:linear-gradient(135deg,#f3a019,#ef7f17);color:white;box-shadow:0 12px 28px #d977062f}.glass-button{background:#ffffff32;border:1px solid #ffffff69;color:inherit}.full{width:100%}
+
+/* SECTIONS */
+.section{padding:85px 7%}.packages-section{background:#eaf0f8}.section-title{text-align:center;max-width:700px;margin:0 auto 42px}.section-title h2{font-size:40px;margin:10px 0}.section-title p{color:var(--muted)}
+.destination-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.destination-card{position:relative;overflow:hidden;min-height:410px;border-radius:24px;background:white;box-shadow:0 15px 45px #102b5e13;transition:.35s}
+.destination-card:hover{transform:translateY(-9px);box-shadow:0 25px 55px #102b5e24}
+.destination-card img{width:100%;height:230px;object-fit:cover;display:block}.destination-content{padding:22px}.destination-content>span{font-size:11px;color:#e18b00;font-weight:900;letter-spacing:1px}.destination-content h3{font-size:28px;margin:7px 0}.destination-content p{color:var(--muted);line-height:1.6;min-height:51px}.destination-content button{border:0;background:none;color:#e18b00;font-weight:900;margin-top:13px;cursor:pointer}
+.package-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.package-card{padding:32px;background:#ffffffb8;border:1px solid white;border-radius:22px;box-shadow:0 15px 40px #102b5e10}.package-card div{font-size:38px}.package-card h3{margin:12px 0}.package-card p{color:var(--muted);line-height:1.6}
+footer{background:#07152f;color:white;text-align:center;padding:40px}footer p{color:#b9c8e2;margin:8px}
+
+/* PROFILE */
+.profile-backdrop{position:fixed;inset:0;background:#06122b55;z-index:300;display:none}.profile-backdrop.show{display:block}
+.profile-panel{position:fixed;right:18px;top:92px;width:350px;max-width:calc(100% - 36px);z-index:400;padding:28px;border-radius:25px;background:#fffffff2;backdrop-filter:blur(25px);box-shadow:0 30px 80px #07152f35;transform:translateX(120%);transition:.35s}.profile-panel.show{transform:none}.close-profile{position:absolute;right:15px;top:10px;border:0;background:none;font-size:28px;cursor:pointer}.profile-photo-wrap{width:95px;height:95px;margin:5px auto 14px;border-radius:50%;overflow:hidden;border:4px solid white;box-shadow:0 8px 25px #102b5e20}.profile-photo-wrap img{width:100%;height:100%;object-fit:cover}.profile-panel h2,.profile-panel>p{text-align:center}.profile-panel>p{color:var(--muted);margin-top:5px}.profile-stats{margin:20px 0;padding:18px;text-align:center;background:#f2f6fc;border-radius:16px}.profile-stats strong{display:block;font-size:30px}.profile-stats span{color:var(--muted);font-size:13px}.history-list{margin:12px 0 18px}.history-item{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #e5eaf2}.history-item span{color:var(--muted);font-size:13px}.logout-button{width:100%;margin-top:10px;padding:12px;border:1px solid #fecaca;background:#fff1f2;color:#dc2626;border-radius:12px;font-weight:800;cursor:pointer}
+
+/* ACCOUNT / BOOKING */
+.account-page{min-height:100vh;padding:40px 15px;background:radial-gradient(circle at top left,#dbeafe,#f7f9fc 45%,#e9eff8);display:flex;align-items:center;justify-content:center}
+.account-card,.booking-card{width:min(520px,100%);padding:34px;border-radius:28px}.account-brand{display:block;text-align:center;font-size:24px;font-weight:900;margin-bottom:22px}.account-icon{text-align:center;font-size:45px}.account-card h1,.booking-card>h1{text-align:center;font-size:32px;margin:10px 0}.account-card>p,.booking-card>p{text-align:center;color:var(--muted);margin-bottom:25px}.account-card label,.booking-card label,.modal-card label{display:block;font-weight:800;font-size:14px;margin:15px 0 7px}.account-card input,.account-card select,.account-card textarea,.booking-card input,.booking-card select,.booking-card textarea,.modal-card input{width:100%;padding:13px 14px;border:1px solid #d8e1ef;border-radius:12px;background:#ffffffd9;outline:none;color:#183663}.account-card input:focus,.booking-card input:focus,.booking-card select:focus{border-color:#f0a21a;box-shadow:0 0 0 4px #f59e0b18}.account-switch{text-align:center;margin-top:18px}.account-switch a,.back-link,.text-link{color:#d98200;font-weight:800}.back-link{display:block;text-align:center;margin-top:20px}
+.booking-shell{width:min(760px,100%)}.booking-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:15px}.booking-header>span{color:#64748b;font-weight:700}.booking-destination-preview{display:flex;gap:18px;align-items:center;background:#f3f6fb;border-radius:18px;padding:12px;margin-bottom:22px}.booking-destination-preview img{width:120px;height:90px;border-radius:13px;object-fit:cover}.booking-destination-preview h1{margin:4px 0}.booking-destination-preview p{color:#64748b}.booking-total{display:flex;justify-content:space-between;align-items:center;padding:18px;margin:22px 0;background:#102b5e;color:white;border-radius:15px}.booking-total strong{font-size:24px;color:#ffd36c}
+
+/* DESTINATION */
+.destination-page{padding:30px 7% 70px}.destination-hero{height:480px;border-radius:30px;overflow:hidden;position:relative}.destination-hero img{width:100%;height:100%;object-fit:cover}.detail-overlay{position:absolute;inset:0;padding:8%;display:flex;flex-direction:column;justify-content:center;background:linear-gradient(90deg,#06122dcc,#06122b15);color:white}.detail-overlay span{color:#ffd36c;font-weight:900;letter-spacing:3px}.detail-overlay h1{font-size:64px;margin:12px 0}.detail-overlay p{font-size:20px}.detail-body{max-width:1050px;margin:35px auto}.detail-main{padding:35px;border-radius:26px}.detail-main h2{font-size:36px;margin:8px 0}.detail-main>p{color:#64748b;line-height:1.8}.detail-columns{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin:30px 0}.detail-columns h3{margin-bottom:12px}.detail-columns p{padding:8px 0;color:#64748b}.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.facts div{background:#f4f7fb;padding:18px;border-radius:15px}.facts strong,.facts span{display:block}.facts span{color:#64748b;margin-top:7px}.book-destination-box{margin-top:30px;padding:25px;border-radius:20px;background:#102b5e;color:white;display:flex;justify-content:space-between;align-items:center;gap:20px}.book-destination-box p{color:#cbd5e1;margin-top:6px}
+
+/* PAYMENT */
+.payment-card{width:min(620px,100%)}.payment-summary{background:#f3f6fb;border-radius:16px;padding:15px;margin:20px 0}.payment-summary p{display:flex;justify-content:space-between;padding:10px;border-bottom:1px solid #e0e6ef}.payment-summary p:last-child{border:0}.payment-summary span{color:#64748b}.pay-total{font-size:19px}.pay-total strong{color:#df8400}.payment-tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:18px}.payment-tabs button{padding:12px;border:1px solid #dce4ef;background:white;border-radius:11px;cursor:pointer;font-weight:800}.payment-tabs button.active{background:#102b5e;color:white}.payment-box{background:#f7f9fc;border-radius:18px;padding:22px}.payment-box h2{margin-bottom:8px}.payment-box p{color:#64748b;margin-bottom:15px}.payment-box input{width:100%;padding:13px;margin:7px 0;border:1px solid #d8e1ef;border-radius:11px}.two-inputs{display:grid;grid-template-columns:1fr 1fr;gap:10px}.qr-wrap{width:230px;height:230px;padding:10px;background:white;border-radius:15px;margin:15px auto}.qr-wrap img{width:100%;height:100%;object-fit:contain}.qr-amount{text-align:center;padding:12px;background:#fff1d8;border-radius:10px;margin-bottom:15px}.qr-amount strong{color:#df8400}.demo-note{text-align:center;color:#94a3b8;font-size:12px;margin:18px 0 0}.success-circle{width:85px;height:85px;border-radius:50%;background:#22c55e;color:white;font-size:52px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px}.confirmation{text-align:center}.confirmation-details{text-align:left;background:#f4f7fb;border-radius:16px;padding:18px;margin:20px 0}.confirmation-details p{display:flex;justify-content:space-between;padding:9px;border-bottom:1px solid #e0e6ef}.confirmation-details p:last-child{border:0}.confirmation-details span{color:#64748b}
+
+/* MODALS */
+.modal{position:fixed;inset:0;z-index:1000;background:#07152f66;display:flex;align-items:center;justify-content:center;padding:20px}.modal-card{width:min(430px,100%);padding:30px;border-radius:25px}.modal-card h2{font-size:30px;margin-bottom:8px}.modal-card>p{color:#64748b;margin-bottom:20px}.modal-close{position:absolute}.modal-card{position:relative}.modal-close{right:18px;top:12px;border:0;background:none;font-size:28px;cursor:pointer}.modal-card input{margin-bottom:4px}
+
+/* RESPONSIVE */
+@media(max-width:900px){.destination-grid,.package-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:50px}}
+@media(max-width:650px){.navbar{height:auto;padding:15px;flex-direction:column;gap:12px}.navbar nav{flex-wrap:wrap;justify-content:center;gap:10px}.destination-grid,.package-grid,.detail-columns,.facts{grid-template-columns:1fr}.hero{padding:50px 5%;min-height:600px}.hero-content{padding:30px}.hero h1{font-size:40px}.hero-buttons{flex-direction:column}.destination-page{padding:18px 4%}.destination-hero{height:380px}.detail-overlay h1{font-size:42px}.book-destination-box{flex-direction:column;align-items:flex-start}.two-inputs{grid-template-columns:1fr}.intro-glass h1{font-size:42px}}

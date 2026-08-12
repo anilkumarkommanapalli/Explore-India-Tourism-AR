@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feedback | Explore India</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="account-page">
+<div class="account-card glass">
+    <a class="account-brand" href="index.html">✈️ Explore India</a>
+    <h1>Travel Feedback</h1>
+    <p>Tell us about your experience.</p>
+    <form onsubmit="alert('Thank you for your feedback! ⭐'); return false;">
+        <label>Name</label><input required type="text">
+        <label>Email</label><input required type="email">
+        <label>Destination</label>
+        <select required>
+            <option value="">Select</option>
+            <option>Goa</option><option>Kashmir</option><option>Kerala</option>
+            <option>Rajasthan</option><option>Hyderabad</option><option>Manali</option>
+        </select>
+        <label>Rating</label>
+        <select required><option>⭐⭐⭐⭐⭐ Excellent</option><option>⭐⭐⭐⭐ Good</option><option>⭐⭐⭐ Average</option></select>
+        <label>Comments</label><textarea rows="5"></textarea>
+        <button class="primary-button full">Submit Feedback</button>
+    </form>
+    <a class="back-link" href="index.html">← Back to Home</a>
+</div>
+</body>
+</html>

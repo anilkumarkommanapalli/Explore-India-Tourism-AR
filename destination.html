@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Destination | Explore India</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <a class="brand" href="index.html">✈️ <span>Explore India</span></a>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#destinations">Explore</a>
+        <button class="profile-btn" onclick="toggleProfile()">👤 Profile</button>
+    </nav>
+</header>
+
+<main id="destinationPage" class="destination-page">
+    <section class="destination-hero">
+        <img id="detailImage" src="images/goa.jpg" alt="Destination">
+        <div class="detail-overlay">
+            <span id="detailTag">DESTINATION</span>
+            <h1 id="detailName">Goa</h1>
+            <p id="detailShort">Discover India.</p>
+        </div>
+    </section>
+
+    <section class="detail-body">
+        <div class="detail-main glass">
+            <span class="eyebrow">EXPERIENCE</span>
+            <h2 id="detailTitle">Experience Goa</h2>
+            <p id="detailDescription"></p>
+
+            <div class="detail-columns">
+                <div>
+                    <h3>📍 Places to Visit</h3>
+                    <div id="places"></div>
+                </div>
+                <div>
+                    <h3>✨ Things to Do</h3>
+                    <div id="activities"></div>
+                </div>
+            </div>
+
+            <div class="facts">
+                <div><strong>Best Time</strong><span id="bestTime"></span></div>
+                <div><strong>Famous For</strong><span id="famousFor"></span></div>
+                <div><strong>Travel Type</strong><span id="travelType"></span></div>
+            </div>
+
+            <div class="book-destination-box">
+                <div>
+                    <span class="eyebrow">READY?</span>
+                    <h2>Book <span id="bookName">Goa</span></h2>
+                    <p>Your booking is only for this destination.</p>
+                </div>
+                <button class="primary-button" onclick="bookCurrentDestination()">🎫 Book This Trip</button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<div id="loginModal" class="modal hidden">
+    <div class="modal-card glass">
+        <button class="modal-close" onclick="closeLogin()">×</button>
+        <h2>Login Required</h2>
+        <p>Please login before booking.</p>
+        <a class="primary-button full" href="login.html">Login</a>
+        <a class="text-link" href="register.html">New user? Register</a>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

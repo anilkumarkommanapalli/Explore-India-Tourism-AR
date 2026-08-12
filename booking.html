@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Trip | Explore India</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="account-page">
+
+<div class="booking-shell">
+    <div class="booking-header">
+        <a class="account-brand" href="index.html">✈️ Explore India</a>
+        <span>Secure Booking</span>
+    </div>
+
+    <div class="booking-card glass">
+        <div class="booking-destination-preview">
+            <img id="bookingImage" src="images/goa.jpg" alt="Destination">
+            <div>
+                <span class="eyebrow">YOUR DESTINATION</span>
+                <h1 id="bookingDestinationName">Goa</h1>
+                <p id="bookingDestinationText">Your selected destination.</p>
+            </div>
+        </div>
+
+        <form onsubmit="return saveBooking()">
+            <label>Full Name</label>
+            <input id="bookingName" type="text" required>
+
+            <label>Email</label>
+            <input id="bookingEmail" type="email" required>
+
+            <label>Phone Number</label>
+            <input id="bookingPhone" type="tel" maxlength="10" required>
+
+            <label>Travel Date</label>
+            <input id="travelDate" type="date" required>
+
+            <label>Number of Travelers</label>
+            <input id="travelers" type="number" min="1" max="20" value="1" required>
+
+            <label>Tour Package</label>
+            <select id="tourPackage" required></select>
+
+            <label>Special Request</label>
+            <textarea id="specialRequest" rows="4" placeholder="Optional"></textarea>
+
+            <div class="booking-total">
+                <span>Total Amount</span>
+                <strong id="bookingAmount">₹0</strong>
+            </div>
+
+            <button class="primary-button full" type="submit">Continue to Payment →</button>
+        </form>
+
+        <a class="back-link" href="index.html">← Back to Home</a>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
